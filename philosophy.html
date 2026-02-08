@@ -4,38 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Elixir – The Secret Of Dates – LUMA Heritage</title>
-  <meta name="description" content="Discover the timeless power of dates: a millennia-old Middle Eastern beauty secret, reimagined into modern luxury skincare rituals." />
+  <title>Our Story & Philosophy – LUMA Heritage</title>
+  <meta name="description" content="Discover the heritage behind LUMA: ancestral beauty rituals from the Arabian Peninsula, reimagined into luxury skincare." />
 
-  <!-- Fonts (same as index) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-only layout helpers (keeps your GitHub style intact) -->
   <style>
+    /* Sections styling - EXACT same as index */
+    .section-divider { 
+      position: relative; 
+      padding: 5rem 0;
+    }
+    .section-divider::after{
+      content:"";
+      position:absolute;
+      left:0; right:0; bottom:0;
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.4), transparent);
+    }
+    
+    /* Page Hero */
     .page-hero {
+      background: linear-gradient(to bottom, #f5efe6 0%, #ede4d8 100%);
       padding: 6.5rem 0 4rem;
-      background: linear-gradient(to bottom, #ffffff 0%, #fdfcfa 100%);
-      border-bottom: 1px solid rgba(197, 162, 112, 0.15);
+      border-bottom: 2px solid rgba(166,133,85,0.25);
     }
+    
     .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 3.5rem;
+      font-weight: 500;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #2a2318;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
+    
     .page-hero p {
       text-align: center;
-      max-width: 950px;
-      margin: 0.75rem auto 0;
-      color: #6b6358;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #4a4037;
+      font-size: 1.2rem;
+      line-height: 1.85;
+      padding: 0 2rem;
     }
 
+    /* Story Sections */
     .story-section {
-      padding: 7rem 0;
-      background: #ffffff;
+      padding: 6rem 0;
+      background: #faf7f2;
+    }
+    
+    .story-section.alt {
+      background: linear-gradient(135deg, #f2ebe0 0%, #e8dfd1 100%);
     }
 
     .story-grid {
@@ -43,60 +72,119 @@
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
-    .double-images {
+    .story-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
 
-    .double-images img,
-    .single-image img {
+    .story-images img {
       width: 100%;
-      border: 1px solid rgba(197, 162, 112, 0.18);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.05);
-      background: #faf8f5;
-    }
-
-    .double-images img {
       aspect-ratio: 1/1;
       object-fit: cover;
+      border: 1.5px solid rgba(166,133,85,0.25);
+      box-shadow: 0 10px 30px rgba(166,133,85,0.15);
+      border-radius: 10px;
+      background: #ffffff;
+      transition: all 0.4s ease;
     }
-
+    
+    .story-images img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+    }
+    
     .single-image img {
-      object-fit: cover;
+      width: 100%;
+      border: 1.5px solid rgba(166,133,85,0.25);
+      box-shadow: 0 10px 30px rgba(166,133,85,0.15);
+      border-radius: 10px;
+      transition: all 0.4s ease;
+    }
+    
+    .single-image img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
     }
 
     .story-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+      color: #2a2318;
+    }
+    
+    .story-content p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #4a4037;
       margin-bottom: 1.5rem;
+    }
+    
+    .story-content p strong {
+      color: #2a2318;
+      font-weight: 600;
     }
 
     .cta-inline {
       display: inline-block;
-      margin-top: 1.25rem;
-      padding: 1rem 2.75rem;
-      background: rgba(255, 255, 255, 0.95);
-      border: 2px solid rgba(197, 162, 112, 0.30);
-      font-size: 0.78rem;
+      margin-top: 1.5rem;
+      padding: 1.1rem 3rem;
+      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
+      color: #ffffff;
+      border: 2px solid #a68555;
+      font-size: 1rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 400;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      border-radius: 8px;
       transition: all 0.4s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(166,133,85,0.25);
     }
     .cta-inline:hover {
-      background: rgba(197, 162, 112, 0.95);
-      color: #ffffff;
-      border-color: #c5a270;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(197, 162, 112, 0.25);
+      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
+      border-color: #8d6e42;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
     }
 
+    /* Triple Blocks */
     .triple-blocks {
-      padding: 7rem 0;
-      background: #faf8f5;
-      border-top: 1px solid rgba(197, 162, 112, 0.15);
-      border-bottom: 1px solid rgba(197, 162, 112, 0.15);
+      padding: 6rem 0;
+      background: linear-gradient(to bottom, #ede4d8 0%, #e3d8c9 100%);
+      border-top: 2px solid rgba(166,133,85,0.25);
+      border-bottom: 2px solid rgba(166,133,85,0.25);
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+    
+    .section-header-center h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.85rem;
+      font-weight: 500;
+      color: #2a2318;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+    
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: #4a4037;
+      line-height: 1.7;
     }
 
     .blocks-grid {
@@ -104,125 +192,188 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 2.5rem;
       margin-top: 3.5rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
     }
 
     .block-card {
-      background: #ffffff;
-      border: 1px solid rgba(197, 162, 112, 0.18);
+      background: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(166,133,85,0.35);
+      border-radius: 12px;
       padding: 3rem 2.5rem;
       transition: all 0.45s ease;
-      position: relative;
     }
     .block-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-      border-color: #c5a270;
+      transform: translateY(-10px);
+      box-shadow: 0 20px 48px rgba(166,133,85,0.25);
+      border-color: rgba(166,133,85,0.55);
+      background: rgba(255,255,255,0.98);
     }
     .block-card h2 {
-      font-size: 2.05rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
       margin-bottom: 1.25rem;
+      color: #2a2318;
+    }
+    
+    .block-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a4037;
+      margin-bottom: 1.5rem;
     }
 
+    /* Icon Stats */
     .icon-stats {
-      padding: 7rem 0;
-      background: #ffffff;
+      padding: 6rem 0;
+      background: #faf7f2;
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+      gap: 2.5rem;
       margin-top: 3.5rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
     }
 
     .stat-item {
-      background: #faf8f5;
-      border: 1px solid rgba(197, 162, 112, 0.15);
-      padding: 2.25rem 1.75rem;
+      background: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(166,133,85,0.35);
+      border-radius: 12px;
+      padding: 2.5rem 1.75rem;
       text-align: center;
       transition: all 0.4s ease;
     }
     .stat-item:hover {
-      background: #ffffff;
-      border-color: #c5a270;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      transform: translateY(-4px);
+      background: rgba(255,255,255,0.98);
+      border-color: rgba(166,133,85,0.55);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+      transform: translateY(-8px);
     }
     .stat-item img {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       object-fit: cover;
-      border-radius: 999px;
-      margin: 0 auto 1rem;
-      border: 1px solid rgba(197, 162, 112, 0.20);
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      border: 2px solid rgba(166,133,85,0.3);
     }
     .stat-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
-      color: #1a1614;
-      margin-bottom: 0.4rem;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #a68555;
+      margin-bottom: 0.5rem;
     }
     .stat-label {
-      color: #6b6358;
-      font-size: 0.95rem;
+      color: #4a4037;
+      font-size: 1rem;
       margin: 0;
+      font-weight: 500;
     }
 
+    /* Final CTA */
     .final-cta {
-      padding: 7rem 0;
-      background: linear-gradient(135deg, #1a1614 0%, #2a2520 100%);
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #2a2318 0%, #3a3028 100%);
       text-align: center;
       color: #ffffff;
     }
     .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
       color: #ffffff;
-      margin-bottom: 1.25rem;
-      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+      font-weight: 500;
     }
     .final-cta p {
       color: rgba(255,255,255,0.9);
       max-width: 850px;
-      margin: 0 auto 2rem;
-      font-size: 1.1rem;
-      line-height: 2;
+      margin: 0 auto 2.5rem;
+      font-size: 1.2rem;
+      line-height: 1.85;
+      padding: 0 2rem;
     }
     .final-cta a {
       display: inline-block;
-      padding: 1.2rem 3.25rem;
-      background: rgba(255,255,255,0.95);
-      color: #1a1614;
-      border: 2px solid rgba(197, 162, 112, 0.30);
-      font-size: 0.78rem;
+      padding: 1.2rem 3.5rem;
+      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
+      color: #ffffff;
+      border: 2px solid #a68555;
+      border-radius: 8px;
+      font-size: 1rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.08em;
+      font-weight: 600;
       transition: all 0.4s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(166,133,85,0.3);
     }
     .final-cta a:hover {
-      background: rgba(197, 162, 112, 0.95);
-      color: #ffffff;
-      border-color: #c5a270;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(197, 162, 112, 0.25);
+      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
+      border-color: #8d6e42;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(166,133,85,0.4);
     }
 
-    @media (max-width: 1100px) {
-      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .blocks-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .page-hero h1 { font-size: 2.8rem; }
+    @media (max-width: 968px) {
+      .story-grid { 
+        grid-template-columns: 1fr; 
+        gap: 3rem; 
+      }
+      .blocks-grid { 
+        grid-template-columns: 1fr; 
+      }
+      .stats-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+      }
+      .page-hero h1 { 
+        font-size: 2.8rem; 
+      }
+      .story-content h2 {
+        font-size: 2rem;
+      }
+      .section-divider {
+        padding: 4rem 0;
+      }
+      .story-section, .triple-blocks, .icon-stats, .final-cta {
+        padding: 4rem 0;
+      }
     }
 
     @media (max-width: 600px) {
-      .double-images { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .final-cta h2 { font-size: 2.2rem; }
+      .story-images { 
+        grid-template-columns: 1fr; 
+      }
+      .stats-grid { 
+        grid-template-columns: 1fr; 
+      }
+      .final-cta h2 { 
+        font-size: 2.2rem; 
+      }
+      .page-hero h1 {
+        font-size: 2rem;
+      }
+      .page-hero {
+        padding: 4rem 0 2.5rem;
+      }
+      .section-divider {
+        padding: 3rem 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER (links to pages) -->
+  <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo-link">
@@ -234,7 +385,7 @@
       </a>
 
       <nav class="menu">
-        <a href="index.html">Home</a>
+        <a href="index.html#home">Home</a>
         <a href="index.html#collections">Our Signature Collections</a>
         <a href="philosophy.html">Our Story & Philosophy</a>
         <a href="elixir.html">Elixir – The Secret Of Dates</a>
@@ -245,134 +396,124 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="container-narrow">
-      <h1>Elixir – The Secret Of Dates</h1>
+    <div class="container">
+      <h1>Our Story & Philosophy</h1>
       <p>
-        A millennia-old beauty secret from the Middle East — revered for its resilience, vitality,
-        and the timeless glow it leaves on the skin.
+        A heritage of Middle Eastern beauty rituals — transformed into modern luxury skincare,
+        designed for the world's finest hotels, spas, and concept stores.
       </p>
     </div>
   </section>
 
-  <!-- TOP: 2 SQUARE VISUALS + INTRO TEXT -->
-  <section class="story-section">
-    <div class="container">
-      <div class="story-grid">
+  <!-- STORY INTRO -->
+  <section class="story-section section-divider">
+    <div class="story-grid">
 
-        <div>
-          <h2>Dairy FROM OUR FAMILY FARMS</h2>
-          <div class="double-images" style="margin-top:2rem;">
-            <a href="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-31.png" aria-label="Elixir Image 1">
-              <img
-                src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-31.png"
-                alt="LUMA Heritage Elixir Visual 01"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
+      <div class="story-images">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png"
+          alt="LUMA Heritage - Our Story"
+          loading="lazy"
+          decoding="async"
+        />
 
-            <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-30.png"
-              alt="LUMA Heritage Elixir Visual 02"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-
-        <div class="story-content">
-          <h2>The Legacy of Dates: A Millennia-Old Secret</h2>
-          <p>
-            In the heart of the Middle East, where golden dunes stretch beyond the horizon, dates have long been revered
-            not only as a source of nourishment but as a pillar of timeless beauty. For centuries, women across the region
-            have infused their skincare rituals with the richness of dates, passing down ancestral wisdom from mother to daughter.
-          </p>
-          <p>
-            More than a fruit, the date embodies resilience, vitality, and refinement. From the opulent hammams of ancient palaces
-            to intimate beauty ceremonies in desert homes, its essence has been cherished for its ability to preserve the skin’s youthfulness and radiance.
-          </p>
-          <p><strong>A tradition whispered through generations, an elixir of beauty untouched by time.</strong></p>
-
-          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
-        </div>
-
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-33.png"
+          alt="LUMA Heritage - Philosophy"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
+
+      <div class="story-content">
+        <h2>An Ancestral Beauty Secret</h2>
+        <p>
+          In the heart of the golden dunes of the Arabian Peninsula, where time seems to stand still,
+          a beauty ritual has been passed down from mother to daughter for centuries.
+        </p>
+        <p>
+          In the homes of Al Ain, in the United Arab Emirates, women carefully prepare skincare treatments
+          inspired by the generous nature of the desert. Sweet dates, purifying cloves, and regenerating aloe vera
+          are blended into precious formulas, applied with gestures that have been transmitted through generations.
+        </p>
+        <p>
+          <strong>These recipes, whispered during evening gatherings and perfected over time, are more than just skincare —
+          they are an invisible bond between the women of yesterday and those of today.</strong>
+        </p>
+
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- TIMELESS POWER: TEXT + VERTICAL IMAGE -->
-  <section class="story-section" style="background:#faf8f5; border-top:1px solid rgba(197,162,112,0.15);">
-    <div class="container">
-      <div class="story-grid">
+  <!-- BIRTH OF LUMA -->
+  <section class="story-section alt section-divider">
+    <div class="story-grid">
 
-        <div class="story-content">
-          <h2>The Timeless Power of Dates</h2>
-          <p>
-            From the heart of Middle Eastern oases, dates have long been revered as a source of nourishment and beauty.
-            More than a fruit, they are a gift from nature, rich in elements that restore and protect the skin.
-          </p>
-          <p>
-            Packed with essential vitamins A, B, and E, dates deeply hydrate, improve skin elasticity, and shield against environmental stressors.
-            Their natural antioxidants help fight the signs of aging, while minerals and amino acids promote a smooth, radiant complexion.
-          </p>
-          <p>
-            For generations, women have relied on the essence of dates to preserve their beauty, ensuring their skin remains luminous and replenished.
-            A ritual rooted in heritage, carrying with it the wisdom of time.
-          </p>
+      <div class="story-content">
+        <h2>The Birth of LUMA</h2>
+        <p>
+          The Emirates have always held a deep fascination for me. During my travels to Al Ain,
+          between lush oases and fragrant souks, I immersed myself in the beauty traditions that my grandmother
+          herself knew so well.
+        </p>
+        <p>
+          I remember her skilled hands preparing balms where the sweetness of dates blended with the strength of cloves
+          and the freshness of aloe vera. These memories became an undeniable truth: these ancestral rituals needed to be
+          revived and adapted to the needs of modern women.
+        </p>
+        <p>
+          <strong>Thus, LUMA was born — a brand where every treatment carries the imprint of these traditions while offering a
+          luxurious and sensorial experience, faithful to the heritage it celebrates.</strong>
+        </p>
 
-          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
-        </div>
-
-        <div class="single-image">
-          <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/vertical-shot-red-carpet-middle-lamps-stick-tripod-with-rock-distance-1-683x1024.jpg"
-            alt="Middle Eastern ambiance"
-            loading="lazy"
-            decoding="async"
-            style="max-height:900px; width:100%;"
-          />
-        </div>
-
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
       </div>
+
+      <div class="single-image">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-34.png"
+          alt="The Birth of LUMA"
+          loading="lazy"
+          decoding="async"
+          style="aspect-ratio:1/1; object-fit:cover;"
+        />
+      </div>
+
     </div>
   </section>
 
-  <!-- RITUAL OF DATES: IMAGE + LONG TEXT -->
-  <section class="story-section">
-    <div class="container">
-      <div class="story-grid">
+  <!-- RITUAL CARRIED FORWARD -->
+  <section class="story-section section-divider">
+    <div class="story-grid">
 
-        <div class="single-image">
-          <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-30.png"
-            alt="The Ritual of Dates"
-            loading="lazy"
-            decoding="async"
-            style="aspect-ratio:1/1; object-fit:cover;"
-          />
-        </div>
-
-        <div class="story-content">
-          <h2>The Ritual of Dates: A Celebration of Beauty and TRADITION</h2>
-          <p>
-            At sunset, in the courtyards of Middle Eastern homes, a time-honored ritual unfolds. Women gather, sharing stories,
-            laughter, and the sacred practice of self-care. Bowls of crushed dates and aromatic oils are prepared, their rich essence
-            massaged into the skin, restoring softness after long days under the desert sun.
-          </p>
-          <p>
-            In these moments, beauty is not simply a practice — it is an art, a legacy, a connection between past and present.
-            The ritual of dates is a reminder that skincare is more than an act of nourishment; it is an embrace of heritage,
-            an ode to the elegance that transcends generations.
-          </p>
-          <p>
-            Even today, this timeless tradition continues, offering a journey through the senses, a pause in time where beauty is not rushed but savored.
-          </p>
-          <p><strong>A ritual of grace, a legacy of light.</strong></p>
-
-          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
-        </div>
-
+      <div class="single-image">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-35.png"
+          alt="A Ritual Carried Forward"
+          loading="lazy"
+          decoding="async"
+          style="aspect-ratio:1/1; object-fit:cover;"
+        />
       </div>
+
+      <div class="story-content">
+        <h2>A Ritual Carried Forward</h2>
+        <p>
+          Even today, these gestures and formulas remain a living testament to the ancestral expertise of the women of Al Ain.
+          Each application is an invitation to slow down, reconnect with oneself, and embrace a beauty legacy that transcends generations.
+        </p>
+        <p>
+          LUMA does not simply create skincare products. It preserves a way of life where nature and tradition unite to reveal each woman's unique radiance.
+        </p>
+        <p>
+          <strong>A secret to be shared, a tradition to be honored, a heritage to be continued.</strong>
+        </p>
+
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+      </div>
+
     </div>
   </section>
 
@@ -380,74 +521,74 @@
   <section class="triple-blocks">
     <div class="container">
       <div class="section-header-center">
-        <h2>Unveil the Experience</h2>
-        <p class="section-subtitle">A sensory journey — rooted in Al Ain traditions, refined for modern luxury rituals.</p>
+        <h2>Experience LUMA Through Ritual</h2>
+        <p class="section-subtitle">Three expressions of heritage — crafted for luxury hospitality and refined self-care.</p>
       </div>
 
       <div class="blocks-grid">
 
         <div class="block-card">
-          <h2>The Essence of Middle Eastern Beauty</h2>
+          <h2>Rituals of Ancestral Beauty</h2>
           <p>
-            Rooted in the traditions of Al Ain, our treatments capture the richness of Arabian skincare rituals,
-            offering an indulgent experience that reconnects you with your skin.
+            Indulge in luxurious skincare rituals inspired by centuries-old traditions. Each formula is crafted with the finest
+            natural ingredients, infused with the nourishing power of dates, aloe vera, and clove — preserving the essence of Middle Eastern beauty.
           </p>
-          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
         </div>
 
         <div class="block-card">
-          <h2>Pure & Powerful Ingredients</h2>
+          <h2>Elegance in Every Stay</h2>
           <p>
-            Harnessing the nourishing properties of dates, clove, and aloe vera, our formulas provide deep hydration,
-            renewal, and protection with every application.
+            Enhance your guests' experience with skincare rituals rooted in tradition. Our exclusive hotel collections blend
+            modern luxury with ancestral wisdom, ensuring every stay feels serene, indulgent, and rejuvenating.
           </p>
-          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
         </div>
 
         <div class="block-card">
-          <h2>A Ritual, A Legacy</h2>
+          <h2>The Art of Everyday Luxury</h2>
           <p>
-            LUMA is more than skincare — it’s a tradition of beauty, shared and perfected over generations,
-            inviting you to embrace a timeless self-care ritual.
+            Transform your daily routine with beauty rituals designed to nourish and protect your skin. Inspired by Middle Eastern
+            traditions, our products bring centuries of expertise into modern self-care.
           </p>
-          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ICON STATS (same 4 icons, but numbered 01-04 like your snippet) -->
-  <section class="icon-stats">
+  <!-- ICON STATS -->
+  <section class="icon-stats section-divider">
     <div class="container">
       <div class="section-header-center">
-        <h2>Crafted With Intention</h2>
-        <p class="section-subtitle">Four pillars guiding each LUMA formulation.</p>
+        <h2>Heritage Meets Modern Excellence</h2>
+        <p class="section-subtitle">A premium standard crafted for discerning hospitality partners.</p>
       </div>
 
       <div class="stats-grid">
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="01." loading="lazy">
-          <div class="stat-number">01.</div>
-          <p class="stat-label">Natural Ingredients</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="5 Stars" loading="lazy">
+          <div class="stat-number">5 Stars</div>
+          <p class="stat-label">Pure Ingredients</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="02." loading="lazy">
-          <div class="stat-number">02.</div>
-          <p class="stat-label">Local Craftsmanship</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="100%" loading="lazy">
+          <div class="stat-number">100%</div>
+          <p class="stat-label">Luxury Experience</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="03." loading="lazy">
-          <div class="stat-number">03.</div>
-          <p class="stat-label">Sustainable Practices</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="3 Years" loading="lazy">
+          <div class="stat-number">3 Years</div>
+          <p class="stat-label">Always Available</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="04." loading="lazy">
-          <div class="stat-number">04.</div>
-          <p class="stat-label">Premium Quality</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="24/7" loading="lazy">
+          <div class="stat-number">24/7</div>
+          <p class="stat-label">Proven Expertise</p>
         </div>
       </div>
     </div>
@@ -455,7 +596,7 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta">
-    <div class="container-narrow">
+    <div class="container">
       <h2>Get in Touch with Us</h2>
       <p>Join Our Exclusive Community Today!</p>
       <a href="contact.html">Get In Touch</a>
@@ -477,7 +618,7 @@
         <div class="footer-links">
           <h4>Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#collections">Our Signature Collections</a></li>
             <li><a href="philosophy.html">Our Story & Philosophy</a></li>
             <li><a href="elixir.html">Elixir – The Secret Of Dates</a></li>
